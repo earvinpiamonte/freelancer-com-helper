@@ -1,0 +1,44 @@
+{
+    "name": "Freelancer.com helper",
+    "version": "1.0",
+    "description": "A Chrome extension for Freelancer.com.",
+    "author" : "@earvinpiamonte",
+    "permissions": [
+        "activeTab",
+        "declarativeContent",
+        "storage"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "page_action": {
+        "default_popup": "popup.html",
+            "default_icon": {
+            "16": "assets/images/icon-16.png",
+            "32": "assets/images/icon-32.png",
+            "48": "assets/images/icon-48.png",
+            "128": "assets/images/icon-128.png"
+        }
+    },
+    "options_page" : "options.html",
+    "icons": {
+        "16": "assets/images/icon-16.png",
+        "32": "assets/images/icon-32.png",
+        "48": "assets/images/icon-48.png",
+        "128": "assets/images/icon-128.png"
+    },
+    "content_scripts": [{
+        "js": [
+            "assets/node_modules/jquery/dist/jquery.min.js",
+            "assets/node_modules/autolinker/dist/Autolinker.min.js",
+            "content_scripts/run_onload_script.js"
+        ],
+        "matches": [
+            "file:///home/earvinpiamonte/Documents/freelancer.com/*",
+            "https://www.freelancer.com/*"
+        ],
+        "run_at": "document_idle"
+    }],
+    "manifest_version": 2
+}
