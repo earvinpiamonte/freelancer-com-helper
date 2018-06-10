@@ -18,7 +18,6 @@ $(function () {
 		e.preventDefault();
 
 		var $cover_letter = $('#cover_letter');
-		var $scroll_to_top_animation_ms = $('#scroll_to_top_animation_ms');
 		var $convert_url_to_links = $('#convert_url_to_links');
 		var $remove_banners = $('#remove_banners');
 
@@ -28,7 +27,6 @@ $(function () {
 		chrome.storage.sync.set(
 			{
 				coverLetter: $cover_letter.val(),
-				scrollTopAnimationDuration: parseInt($scroll_to_top_animation_ms.val()),
 				convertURLtoLinks : $convert_url_to_links.prop('checked'),
 				removeBanners : $remove_banners.prop('checked')
 			},
@@ -47,29 +45,26 @@ $(function () {
 
 
 });
+
 function restore_settings() {
 
 	var $cover_letter = $('#cover_letter');
-	var $scroll_to_top_animation_ms = $('#scroll_to_top_animation_ms');
 	var $convert_url_to_links = $('#convert_url_to_links');
 	var $remove_banners = $('#remove_banners');
 
 	chrome.storage.sync.get(
 		{
 			coverLetter: '',
-			scrollTopAnimationDuration: 0,
 			convertURLtoLinks : false,
 			removeBanners: false
 		},
 		function(items) {
 			$cover_letter.val(items.coverLetter);
-			$scroll_to_top_animation_ms.val(items.scrollTopAnimationDuration);
 			$convert_url_to_links.prop('checked', items.convertURLtoLinks);
 			$remove_banners.prop('checked', items.removeBanners);
 		}
 	);
 }
-
 
 function show_form_alert(html_class, html) {
 	$('#settings-form-alert').addClass(html_class).html(html).show(0).delay(5000).hide(0);

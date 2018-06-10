@@ -5,13 +5,13 @@ chrome.storage.sync.get(
 	},
 	function(items) {
 
-		$('#proposalDescription').val(items.coverLetter).select();
+		$('.descr').val(items.coverLetter).select();
 
 		$('html, body').animate(
 			{
-				scrollTop: $('#proposalDescription').offset().top
+				scrollTop: $('#projectHeader').offset().top
 			},
-			300
+			100
 		);
 	}
 );

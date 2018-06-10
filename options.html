@@ -56,21 +56,10 @@
 		        		</p><!-- /.text-muted -->
 		        		<textarea name="cover_letter" id="cover_letter" class="form-control" rows="4" placeholder="Write something here"></textarea>
         			</div><!-- /.form-group -->
-        			<div class="form-group mb-4">
-        				<label for="scroll_to_top_animation_ms" class="mb-0">Scroll to top duration</label>
-		        		<p class="text-muted mb-0">
-		        			<small>Duration is in milliseconds, for eg. 1 second = 1000 ms and must be &lt;= 10 seconds.</small>
-		        		</p><!-- /.text-muted -->
-		        		<div class="row">
-                            <div class="col-md-6">
-                                <input type="number" name="scroll_to_top_animation_ms" id="scroll_to_top_animation_ms" class="form-control" placeholder="eg. 1000" min="0" max="10000" required />
-                            </div><!-- /.col-md-6 -->
-                        </div><!-- /.row -->
-        			</div><!-- /.form-group -->
                     <div class="form-group mb-4">
                         <label for="convert_url_to_links" class="mb-0">
                             Convert URLs to links?
-                            <i class="fas fa-info-circle text-muted" data-toggle="tooltip" data-title="Requires reloading Freelancer.com page after saving Settings."></i>
+                            <i class="fas fa-info-circle text-muted" data-toggle="tooltip" data-title="Requires reloading Freelancer.com page after saving Settings to see changes." data-placement="right"></i>
                         </label>
                         <p class="text-muted mb-0">
                             <small>This will convert every URL on the project description to clickable links.</small>
@@ -83,7 +72,7 @@
                     <div class="form-group mb-4">
                         <label for="remove_banners" class="mb-0">
                             Remove page banners?
-                            <i class="fas fa-info-circle text-muted" data-toggle="tooltip" data-title="Requires reloading Freelancer.com page after saving Settings."></i>
+                            <i class="fas fa-info-circle text-muted" data-toggle="tooltip" data-title="Requires reloading Freelancer.com page after saving Settings to see changes." data-placement="right"></i>
                         </label>
                         <p class="text-muted mb-0">
                             <small>This will remove the banners on Freelancer.com pages.</small>
@@ -98,6 +87,12 @@
         				<button type="submit" class="btn btn-primary" id="btn-save-settings" title="Save settings">Save</button>
         			</div><!-- /.form-group -->
         		</form>
+                <hr />
+
+                <div class="alert alert-secondary mt-5">
+                    <i class="far fa-envelope"></i>
+                    Found a bug? Send me an email at <a href="mailto:earvin.piamonte@gmail.com?subject=Reporting a bug on Freelancer.com helper extension" title="earvin.piamonte@gmail.com">earvin.piamonte@gmail.com</a>.
+                </div><!-- /.alert alert-secondary -->
 
         	</div><!-- /.col-md-6 offset-md-3 -->
         </div><!-- /.row -->
