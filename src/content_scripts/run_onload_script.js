@@ -24,21 +24,15 @@ $(function () {
 
 			if (items.removeBanners == true) {
 
-				if($('#give-get-banner, #upsell-banners-anchor').length > 0){
-					$('#give-get-banner, #upsell-banners-anchor').remove();
-
-					var interval = setInterval(function(){
-						if($('#give-get-banner, #upsell-banners-anchor').length > 0){
-							console.log('counting');
-							$('#give-get-banner, #upsell-banners-anchor').remove();
-						}else{
-							clearInterval(interval);
-						}
-					}, 3000);
-
-				}else{
-					console.log('No banner is visible. If you think it is visible and the option removing it did not work, please report this as a bug to the developer at earvin.piamonte@gmail.com.');
-				}
+				var interval = setInterval(function(){
+					if($('#give-get-banner, #upsell-banners-anchor').length > 0){
+						$('#give-get-banner, #upsell-banners-anchor').remove();
+						console.log('Removed banner.');
+					}else{
+						clearInterval(interval);
+						console.log('Interval cleared.');
+					}
+				}, 1000);
 
 			}
 		}
