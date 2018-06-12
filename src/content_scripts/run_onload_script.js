@@ -24,14 +24,23 @@ $(function () {
 
 			if (items.removeBanners == true) {
 
+				var interval_counter = 1;
+
 				var interval = setInterval(function(){
-					if($('#give-get-banner, #upsell-banners-anchor').length > 0){
-						$('#give-get-banner, #upsell-banners-anchor').remove();
-						console.log('Removed banner.');
-					}else{
-						clearInterval(interval);
-						console.log('Interval cleared.');
+					console.log('Remove banner init.');
+					$('#give-get-banner, #upsell-banners-anchor').remove();
+
+					console.log(interval_counter);
+
+					if ((interval_counter % 3) == 0) {
+						if($('#give-get-banner, #upsell-banners-anchor').length < 1){
+							clearInterval(interval);
+							console.log('No banner seen. Interval cleared.');
+						}
 					}
+
+					interval_counter ++;
+
 				}, 1000);
 
 			}
