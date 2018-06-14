@@ -35,6 +35,7 @@ $(function () {
 		var $cover_letter = $('#cover_letter');
 		var $convert_url_to_links = $('#convert_url_to_links');
 		var $remove_banners = $('#remove_banners');
+		var $auto_scroll_to_bid = $('#auto_scroll_to_bid');
 
 		var html_class = 'alert alert-danger';
 		var html = '<i class="far fa-times-circle"></i> Your settings was not saved. Please try again.';
@@ -50,7 +51,8 @@ $(function () {
 				{
 					coverLetter: $cover_letter.val(),
 					convertURLtoLinks : $convert_url_to_links.prop('checked'),
-					removeBanners : $remove_banners.prop('checked')
+					removeBanners : $remove_banners.prop('checked'),
+					autoScrollToBid : $auto_scroll_to_bid.prop('checked')
 				},
 				function() {
 
@@ -75,17 +77,20 @@ function restore_settings() {
 	var $cover_letter = $('#cover_letter');
 	var $convert_url_to_links = $('#convert_url_to_links');
 	var $remove_banners = $('#remove_banners');
+	var $auto_scroll_to_bid = $('#auto_scroll_to_bid');
 
 	chrome.storage.sync.get(
 		{
 			coverLetter: '',
 			convertURLtoLinks : false,
-			removeBanners: false
+			removeBanners: false,
+			autoScrollToBid: false
 		},
 		function(items) {
 			$cover_letter.val(items.coverLetter);
 			$convert_url_to_links.prop('checked', items.convertURLtoLinks);
 			$remove_banners.prop('checked', items.removeBanners);
+			$auto_scroll_to_bid.prop('checked', items.autoScrollToBid);
 
 			var cover_letter_max_length = 1500;
 
