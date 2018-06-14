@@ -18,7 +18,7 @@ $(function () {
 
 					$('.project-brief').html(linked_content);
 				}else{
-					console.log('Project description is not visible. If you think it is visible and converting the URLs to links did not work, please report this as a bug to the developer at earvin.piamonte@gmail.com.');
+					// console.log('Project description is not visible. If you think it is visible and converting the URLs to links did not work, please report this as a bug to the developer at earvin.piamonte@gmail.com.');
 				}
 
 			}
@@ -28,7 +28,7 @@ $(function () {
 				var interval_counter = 1;
 
 				var interval = setInterval(function(){
-					console.log('Remove banner init.');
+					/*console.log('Remove banner init.');
 					$('#give-get-banner, #upsell-banners-anchor').remove();
 
 					console.log(interval_counter);
@@ -40,9 +40,11 @@ $(function () {
 						}
 					}
 
-					interval_counter ++;
+					interval_counter ++;*/
 
-				}, 1000);
+					$('#give-get-banner, #upsell-banners-anchor').remove();
+
+				}, 100);
 
 			}
 
@@ -51,21 +53,24 @@ $(function () {
 				var check_submit_project_tags_interval = setInterval(function(){
 
 					if (jQuery('#submit-project-tags, #cancel-project-tagging').length > 0) {
+
+						console.log('Submit project tags button has been found! Clearing interval...');
+						clearInterval(check_submit_project_tags_interval);
+
 						jQuery('#submit-project-tags, #cancel-project-tagging').on('click', function(){
 							console.log('clicked #submit-project-tags, #cancel-project-tagging');
 
 							var check_bid_owner_interval = setInterval(function(){
 
 								if (jQuery('.bid.owner').length > 0) {
-									jQuery('html, body').animate({ scrollTop: jQuery('.bid.owner').offset().top }, 100);
 									console.log('done auto scroll');
 									clearInterval(check_bid_owner_interval);
+
+									jQuery('html, body').animate({ scrollTop: jQuery('.bid.owner').offset().top }, 100);
 								}
 							}, 1000);
 
 						});
-						console.log('Submit project tags button has been found! Clearing interval...');
-						clearInterval(check_submit_project_tags_interval);
 					}
 
 				}, 1000);
