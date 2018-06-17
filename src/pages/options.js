@@ -4,8 +4,12 @@ $(function () {
 
 	var manifest = chrome.runtime.getManifest();
 
-	$('.manifest-version').html(manifest.version);
 	$('.manifest-author').html(manifest.author);
+
+	$('.link-create-tab').on('click', function(){
+		chrome.tabs.create({url: $(this).attr('href')});
+     	return false;
+	});
 
 	$('[data-toggle="tooltip"]').tooltip();
 
