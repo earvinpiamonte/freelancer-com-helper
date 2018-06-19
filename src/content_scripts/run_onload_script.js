@@ -42,7 +42,7 @@ $(function () {
 
 					interval_counter ++;*/
 
-					$('#give-get-banner, #upsell-banners-anchor').remove();
+					$('#give-get-banner, #upsell-banners-anchor, #corporate-upsell-banner, #skills-lab-banner').remove();
 
 				}, 100);
 
