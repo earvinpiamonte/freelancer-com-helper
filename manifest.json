@@ -1,6 +1,6 @@
 {
     "name": "Freelancer.com Helper",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A Chrome extension for Freelancer.com. Paste cover letter easily. Convert URLs to hyperlinks. Scroll to top button. Remove banners.",
     "author" : "earvinpiamonte",
     "permissions": [
