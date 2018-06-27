@@ -28,21 +28,8 @@ $(function () {
 				var interval_counter = 1;
 
 				var interval = setInterval(function(){
-					/*console.log('Remove banner init.');
-					$('#give-get-banner, #upsell-banners-anchor').remove();
 
-					console.log(interval_counter);
-
-					if ((interval_counter % 3) == 0) {
-						if($('#give-get-banner, #upsell-banners-anchor').length < 1){
-							clearInterval(interval);
-							console.log('No banner seen. Interval cleared.');
-						}
-					}
-
-					interval_counter ++;*/
-
-					$('#give-get-banner, #upsell-banners-anchor, #corporate-upsell-banner, #skills-lab-banner').remove();
+					$('#give-get-banner, #upsell-banners-anchor, #corporate-upsell-banner, #skills-lab-banner, #membership-sale-banner').remove();
 
 				}, 100);
 
