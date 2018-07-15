@@ -31,19 +31,39 @@
         	<div class="col-md-6 offset-md-3">
         		<div id="settings-form-alert" class="alert alert-success" style="display:none"></div><!-- /#settings-form-alert.alert alert-success -->
         		<form id="settings-form" class="needs-validation">
-        			<div class="form-group mb-4">
-        				<label for="cover_letter" class="mb-0">Cover&#47; proposal letter</label>
-		        		<p class="text-muted mb-0">
-		        			<small>Set cover&#47; proposal letter here. Check this <a href="https://www.freelancer.com/community/articles/win-more-projects-write-better-bids" target="_blank">example</a> about writing the best bid.</small>
-		        		</p><!-- /.text-muted -->
-		        		<textarea name="cover_letter" id="cover_letter" class="form-control" rows="4" placeholder="Write something here"></textarea>
+                    <div class="form-group mb-4">
+                        <label for="experiences">Skills and experiences <span class="badge badge-primary">New</span></label>
+                        <textarea name="experiences" id="experiences" class="form-control" rows="3" placeholder="PHP, MySQL, JavaScript, etc..."></textarea>
+                        <p class="mb-0">
+                            <small class="text-muted">
+                                <span id="experiences_chars_left"></span>
+                                characters left
+                            </small>
+                        </p><!-- /.mb-0 -->
+                    </div><!-- /.form-group -->
+                    <div class="form-group mb-4">
+                        <label for="additionalInformation">Additional information <span class="badge badge-primary">New</span></label>
+                        <textarea name="additionalInformation" id="additionalInformation" class="form-control" rows="6" placeholder="Set additional information here that your want to tell the client."></textarea>
+                        <p class="mb-0">
+                            <small class="text-muted">
+                                <span id="additional_information_chars_left"></span>
+                                characters left
+                            </small>
+                        </p><!-- /.mb-0 -->
+                    </div><!-- /.form-group -->
+                    <div class="form-group mb-4">
+                        <label for="cover_letter" class="mb-0">Bid proposal letter <span class="badge badge-warning" title="This will probably be removed in the future updates">Old</span></label>
+                        <p class="text-muted mb-0">
+                            <small>Set cover&#47; proposal letter here. Check this <a href="https://www.freelancer.com/community/articles/win-more-projects-write-better-bids" target="_blank">example</a> about writing the best bid.</small>
+                        </p><!-- /.text-muted -->
+                        <textarea name="cover_letter" id="cover_letter" class="form-control" rows="4" placeholder="Write something here"></textarea>
                         <p class="mb-0">
                             <small class="text-muted">
                                 <span id="cover_letter_chars_left"></span>
                                 characters left
                             </small>
                         </p><!-- /.mb-0 -->
-        			</div><!-- /.form-group -->
+                    </div><!-- /.form-group -->
                     <div class="form-group mb-4">
                         <label for="convert_url_to_links" class="mb-0">
                             Convert URLs to links?
