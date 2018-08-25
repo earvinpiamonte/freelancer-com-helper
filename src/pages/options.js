@@ -158,6 +158,10 @@ function restore_settings() {
 			$('#cover_letter_chars_left').text(cover_letter_max_length - items.coverLetter.length);
 			$('#experiences_chars_left').text(experiences_max_length - items.experiences.length);
 			$('#additional_information_chars_left').text(additional_information_max_length - items.additionalInformation.length);
+
+			// auto expand textarea after setting each textarea the values
+			autosize.update($('.textarea-auto-expand'));
+
 		}
 	);
 }
