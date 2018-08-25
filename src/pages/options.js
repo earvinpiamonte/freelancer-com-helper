@@ -13,6 +13,9 @@ $(function () {
 
 	$('[data-toggle="tooltip"]').tooltip();
 
+	// auto resize .textarea-auto-expand
+	autosize($('.textarea-auto-expand'));
+
 	$('#btn-close-settings').on('click', function (e) {
 		e.preventDefault();
 		window.close();

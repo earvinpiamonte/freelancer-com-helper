@@ -22,7 +22,9 @@ $(function () {
 
 			var error_text = '';
 
-			if (experiences == '') {
+			// temporarily removed experiences and additional information
+
+			/*if (experiences == '') {
 				error_text = 'Set your <strong>experiences</strong> on Settings.';
 				$('#btn-place-experiences').prop('disabled', true);
 			}
@@ -30,7 +32,7 @@ $(function () {
 			if (additionalInformation == '') {
 				error_text += ' Set your <strong>additional information</strong> on Settings.';
 				$('#btn-place-additionalInformation').prop('disabled', true);
-			}
+			}*/
 
 			if (coverLetter == '') {
 				error_text += ' Set your <strong>cover letter</strong> on Settings.';
