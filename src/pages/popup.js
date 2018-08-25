@@ -35,7 +35,7 @@ $(function () {
 			}*/
 
 			if (coverLetter == '') {
-				error_text += ' Set your <strong>cover letter</strong> on Settings.';
+				error_text += ' Set your <strong>Bid proposal</strong> on Settings.';
 				$('#btn-place-proposal-letter').prop('disabled', true);
 			}
 
