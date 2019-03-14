@@ -45,13 +45,13 @@ gulp.task('minify_libraries', function() {
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        'node_modules/autolinker/dist/Autolinker.min.js',
-        'node_modules/autosize/dist/autosize.min.js'
+        'node_modules/autolinker/dist/Autolinker.js',
+        'node_modules/autosize/dist/autosize.min.js',
       ]
     )
     .pipe(concat('libraries.min.js'))
     // Minify the file
-    .pipe(uglify())
+    // .pipe(uglify())
     // Output
     .pipe(gulp.dest('../dist/libraries/'))
 });
