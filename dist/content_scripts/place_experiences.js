@@ -1,1 +1,0 @@
-chrome.storage.sync.get({experiences:""},function(e){var i=jQuery('form[name="experience"]').find("textarea");i.length>0?i.val(e.experiences).select():console.log("A textarea field for experiences is not visible. If you think it is visible and pasting of experiences did not work, please report this as a bug to the developer at earvin.piamonte@gmail.com.")});
